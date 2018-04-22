@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EIntentActivity2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="second activity"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <ImageView
+        android:id="@+id/eia2_imgview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/p1"/>
+
+    <TextView
+        android:id="@+id/eia2_se_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eia2_imgview"
+        android:gravity="center"
+        android:text="전달받은 내용"
+        android:textSize="20dp"/>
+
+</RelativeLayout>

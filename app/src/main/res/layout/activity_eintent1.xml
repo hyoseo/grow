@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EIntentActivity1">
+
+    <EditText
+        android:id="@+id/eia1_name_et"
+        android:hint="이름을 입력해주세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"/>
+
+    <EditText
+        android:id="@+id/eia1_phone_et"
+        android:hint="연락처를 입력해주세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/eia1_name_et"/>
+
+    <LinearLayout
+        android:id="@+id/eia1_lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eia1_phone_et"
+        android:orientation="horizontal"
+        >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/eia1_option1_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="사람1"/>
+
+            <RadioButton
+                android:id="@+id/eia1_option2_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="사람2"/>
+
+            <RadioButton
+                android:id="@+id/eia1_option3_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="사람3"/>
+
+            <RadioButton
+                android:id="@+id/eia1_option4_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="사람4"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/eia1_go_second_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/eia1_go_third_b"
+        android:text="Second 액티비티로 이동"/>
+
+    <Button
+        android:id="@+id/eia1_go_third_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Third 액티비티로 이동"/>
+
+</RelativeLayout>
