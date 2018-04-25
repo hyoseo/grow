@@ -1,20 +1,20 @@
 package com.grow.source;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button mQuizStartButton;
     private Button mEIntentStartButton;
+    private Button mELVStartButton;
 
     private static final int REQUEST_CODE_QUIZ = 0;
     private static final int REQUEST_CODE_EINTENT = 1;
+    private static final int REQUEST_CODE_ELV = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,18 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         });
+
+        mELVStartButton = (Button)findViewById(R.id.elv_start_button);
+        mELVStartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivityForResult(new Intent(MainActivity.this, ELVActivity.class),
+                        REQUEST_CODE_ELV);
+
+                Toast.makeText(getApplicationContext(), "ELVActivity Started", Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
     }
 
     @Override
@@ -53,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
                     .show();
         } else if (requestCode == REQUEST_CODE_EINTENT) {
             Toast.makeText(getApplicationContext(), "EIntentActivity1 Ended", Toast.LENGTH_SHORT)
+                    .show();
+        } else if (requestCode == REQUEST_CODE_ELV) {
+            Toast.makeText(getApplicationContext(), "ELVActivity Ended", Toast.LENGTH_SHORT)
                     .show();
         }
     }

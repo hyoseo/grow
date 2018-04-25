@@ -20,7 +20,8 @@
         <activity android:name=".QuizActivity" />
         <activity android:name=".EIntentActivity1" />
         <activity android:name=".EIntentActivity2" />
-        <activity android:name=".EIntentActivity3"></activity>
+        <activity android:name=".EIntentActivity3" />
+        <activity android:name=".ELVActivity" />
     </application>
 
 </manifest>
